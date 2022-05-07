@@ -1,5 +1,10 @@
+import sys
+
 a = []
 a.append(0)
-b = {"hello", "hi"}                                     # used to save unique variables
-b.append("heyo")
+print(a)
+b = [1] * 10
 print(b)
+c = {"hello", "hi"}                                     # used to save unique variables
+c.append("heyo")
+print(c)
