@@ -1,7 +1,6 @@
-def main():
-    a = 10
-    print(a)
+import sys
 
+checkArr = ["c=", "c-", "d-", "lj", "nj", "s=", "z="]
+inputStr = sys.stdin.readline().rstrip()
 
-if __name__ == "__main__":
-    main()
+for i in range(len(inputStr)):

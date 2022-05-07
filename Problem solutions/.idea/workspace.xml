@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37cd1bbf-d6a3-41ff-8bce-9460f253c62b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Tutorial/CONSTANTS.py" afterDir="false" />
+    <list default="true" id="37cd1bbf-d6a3-41ff-8bce-9460f253c62b" name="Changes" comment="Add Code">
+      <change afterPath="$PROJECT_DIR$/1152-단어의 개수.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2908-상수.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5622-다이얼.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tutorial/blockCollection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Tutorial/blockCollection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tutorial/outputWays.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Tutorial/outputWays.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tutorial/variableChange.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Tutorial/variableChange.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tutorial/variableCollection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Tutorial/variableCollection.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -155,7 +156,21 @@
       <option name="presentableId" value="Default" />
       <updated>1651661165825</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Code">
+      <created>1651913453082</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651913453082</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add Code">
+      <created>1651913473049</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651913473049</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,5 +183,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Code" />
   </component>
 </project>
