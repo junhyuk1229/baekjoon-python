@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37cd1bbf-d6a3-41ff-8bce-9460f253c62b" name="Changes" comment="Add Code">
-      <change afterPath="$PROJECT_DIR$/1152-단어의 개수.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2908-상수.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5622-다이얼.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tutorial/variableChange.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Tutorial/variableChange.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tutorial/variableCollection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Tutorial/variableCollection.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651913473049</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Code">
+      <created>1651918951262</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651918951262</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
