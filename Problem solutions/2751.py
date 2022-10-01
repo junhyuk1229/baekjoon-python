@@ -28,11 +28,13 @@ def mergeSort(inputArr):
 
 
 def main():
-    arrLen, checkNum = map(int, sys.stdin.readline().split(sep=' '))
-    inputArr = list(map(int, sys.stdin.readline().split(sep=' ')))
-
-    resultArr = mergeSort(inputArr)
-    print(resultArr)
+    arrLen = int(sys.stdin.readline().rstrip())
+    numArr = []
+    for i in range(arrLen):
+        numArr.append(int(sys.stdin.readline().rstrip()))
+    resultArr = mergeSort(numArr)
+    for i in resultArr:
+        print(i)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,3 @@
-import sys
-
-
 def mergeSort(inputArr):
     if len(inputArr) == 1:
         return inputArr
@@ -25,15 +22,3 @@ def mergeSort(inputArr):
             resultArr.append(secondArr[secondIndex])
             secondIndex += 1
     return resultArr
-
-
-def main():
-    arrLen, checkNum = map(int, sys.stdin.readline().split(sep=' '))
-    inputArr = list(map(int, sys.stdin.readline().split(sep=' ')))
-
-    resultArr = mergeSort(inputArr)
-    print(resultArr)
-
-
-if __name__ == "__main__":
-    main()

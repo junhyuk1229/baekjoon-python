@@ -10,7 +10,7 @@ def mergeSort(inputArr):
     resultArr = []
     firstIndex = secondIndex = 0
     while (firstIndex < len(firstArr)) and (secondIndex < len(secondArr)):
-        if firstArr[firstIndex] < secondArr[secondIndex]:
+        if firstArr[firstIndex][0] <= secondArr[secondIndex][0]:
             resultArr.append(firstArr[firstIndex])
             firstIndex += 1
         else:
@@ -28,12 +28,18 @@ def mergeSort(inputArr):
 
 
 def main():
-    arrLen, checkNum = map(int, sys.stdin.readline().split(sep=' '))
-    inputArr = list(map(int, sys.stdin.readline().split(sep=' ')))
+    arrLen = int(sys.stdin.readline().rstrip())
+    inputArr = []
+    for i in range(arrLen):
+        inputNum, inputStr = map(str, sys.stdin.readline().split(sep=" "))
+        inputArr.append([int(inputNum), inputStr.rstrip()])
 
-    resultArr = mergeSort(inputArr)
-    print(resultArr)
+    outputArr = mergeSort(inputArr)
 
+    for i in outputArr:
+        for j in i:
+            print(j, end=' ')
+        print()
 
 if __name__ == "__main__":
     main()
