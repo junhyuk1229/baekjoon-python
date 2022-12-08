@@ -6,3 +6,9 @@ c1, c2 = map(int, input().split(sep=' '))   # splits the input with sep and chan
 d = list(map(int, input().split(sep=' ')))  # saves a list
 e = sys.stdin.readline().rstrip()           # used to read line with less time + rstrip() is used to delete the \n char
 f = list(map(int, sys.stdin.readline().split(sep=' ')))
+
+while True:
+    try:
+        g = int(sys.stdin.readline().rstrip())
+    except:
+        break;
