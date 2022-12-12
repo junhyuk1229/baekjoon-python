@@ -1,17 +1,18 @@
 import sys
 
 
-class Pokemon():
-    def __init__(self, name, num):
-        self.name = name
-        self.num = num
+def get_five_num(input_num):
+    five_num = 5
+    output_num = 0
+    while five_num <= input_num:
+        output_num += input_num // five_num
+        five_num *= 5
+    return output_num
 
 
 def main():
-    dic_num, quest_num = map(int, sys.stdin.readline().split(sep=' '))
-    dic_arr = []
-    
-
+    n, m = map(int, sys.stdin.readline().split(sep=' '))
+    print(get_five_num(n) - get_five_num(m) - get_five_num(n - m))
 
 
 if __name__ == "__main__":
