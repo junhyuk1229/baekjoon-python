@@ -24,3 +24,20 @@ def bfsSearch(graphInput, startNode):
                 tempQueue.append(conNode)
         print(tempQueue.pop(0), end=' ')
     print()
+
+
+def search_half(input_arr, input_num):
+    start_index = 0
+    middle_index = (len(input_arr) - 1) // 2
+    end_index = len(input_arr) - 1
+    while start_index <= end_index:
+        if input_arr[middle_index] == input_num:
+            return True
+        if input_arr[middle_index] < input_num:
+            start_index = middle_index + 1
+        else:
+            end_index = middle_index - 1
+        middle_index = (start_index + end_index) // 2
+    return False
+
+#sets are faster than lists
