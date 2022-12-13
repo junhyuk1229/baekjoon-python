@@ -1,0 +1,4 @@
+12/13/2022
+learned that sets are better than lists in 'for ~ in ~' loops
+just using lists are slow - question 1904
+
