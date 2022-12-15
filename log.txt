@@ -2,3 +2,8 @@
 learned that sets are better than lists in 'for ~ in ~' loops
 just using lists are slow - question 1904
 
+12/15/2022
+learned to call functions in functions and how to use them effectively
+tried using 'class' to better pass variables in functions
+couldn't use global variables because of 'if __name__' statement
+
