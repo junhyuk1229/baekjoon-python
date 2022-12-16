@@ -7,3 +7,7 @@ learned to call functions in functions and how to use them effectively
 tried using 'class' to better pass variables in functions
 couldn't use global variables because of 'if __name__' statement
 
+12/16/2022
+relearned dynamic programing. probably needs refreshing regularly
+started doing medium difficulty problems
+learned to use global variables but would like to just ignore the other parts
