@@ -11,3 +11,7 @@ couldn't use global variables because of 'if __name__' statement
 relearned dynamic programing. probably needs refreshing regularly
 started doing medium difficulty problems
 learned to use global variables but would like to just ignore the other parts
+
+12/17/2022
+learned about new problem concept need to focus and resolve = question 1654, 2805
+started talking to myself when doing problems to get better practise for coding interviews
