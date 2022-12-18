@@ -15,3 +15,9 @@ learned to use global variables but would like to just ignore the other parts
 12/17/2022
 learned about new problem concept need to focus and resolve = question 1654, 2805
 started talking to myself when doing problems to get better practise for coding interviews
+
+12/18/2022
+learned about max heap need to review with problems = question 1927
+Starting to get better with dfs and bfs. Still need more coding to perfect it.
+Solved question 9095 using only patterns. I need to know why those patterns make the output
+
