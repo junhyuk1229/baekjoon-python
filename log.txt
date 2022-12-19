@@ -21,3 +21,6 @@ learned about max heap need to review with problems = question 1927
 Starting to get better with dfs and bfs. Still need more coding to perfect it.
 Solved question 9095 using only patterns. I need to know why those patterns make the output
 
+12/19/2022
+Mastered dfs and bfs(kind of) can make the code without looking at a tutorial and can
+change the needs as I want.
