@@ -12,7 +12,7 @@ def bfs(start_arr, visit_arr, map_arr):
             if visit_arr[next_pos]:
                 continue
             visit_arr[next_pos] = True
-            if next_pos in map_arr and not visit_arr[map_arr[next_pos]]:
+            if next_pos in map_arr:
                 visit_arr[map_arr[next_pos]] = True
                 output_arr.append(map_arr[next_pos])
                 continue
