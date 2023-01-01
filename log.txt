@@ -24,3 +24,6 @@ Solved question 9095 using only patterns. I need to know why those patterns make
 12/19/2022
 Mastered dfs and bfs(kind of) can make the code without looking at a tutorial and can
 change the needs as I want.
+
+logs are continued at the blog website
+https://junhyuk1229.tistory.com/
