@@ -3,23 +3,32 @@ from collections import deque
 
 class Stack:
     def __init__(self):
+        # Stack for saving values
         self.stack = deque()
+        # Length of the stack
         self.length = 0
 
+    """Returns length of stack"""
     def __len__(self):
         return self.length
 
+    """Checks if stack is empty"""
     def empty(self):
         if self.length == 0:
             return True
         return False
 
+    """Pushes arguments to stack"""
     def stack_push(self, *args):
         for value in args:
             self.length += 1
             self.stack.append(value)
 
-    def stack_pop(self):
+    """Pops arguments as output"""
+    def stack_pop(self, pop_num=1, error_num=-1):
+        # Check if pop number is greater than 0
+        if pop_num <= 0:
+            raise ValueError("Can't pop negative or zero values")
         if self.empty():
             return -1
         self.length -= 1
