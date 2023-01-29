@@ -1,85 +1,57 @@
-import sys
 from collections import deque
+import sys
 
 
-DX = [-1, 1, 0, 0]
-DY = [0, 0, -1, 1]
+def dfs(people_map, know_list):
+    output_list = []
+    temp_list = deque()
+    temp_map = [False] * len(know_list)
+    for temp_index, temp_val in enumerate(know_list):
+        if temp_val:
+            temp_list.append(temp_index)
+            temp_map[temp_index] = True
+    print(temp_list)
+    print(temp_map)
+
+    while temp_list:
+        output_list.append(temp_list.pop())
+        for temp_index, temp_val in enumerate(people_map[output_list[-1]]):
+            if not temp_val or temp_map[temp_index]:
+                continue
+            temp_list.append(temp_index)
+            temp_map[temp_index] = True
+        temp_map[output_list[-1]] = True
+    return output_list
 
 
-def move_arr(strip_arr: list, arr_len: int):
-    zero_index = 0
-    for temp_index in range(arr_len):
-        if strip_arr[temp_index] == 0:
+def main():
+    people_num, party_num = map(int, sys.stdin.readline().rstrip().split(sep=' '))
+    know_list = [False] * people_num
+    temp_list = list(map(int, sys.stdin.readline().rstrip().split(sep=' ')))
+    for temp_index, temp_num in enumerate(temp_list):
+        if temp_index == 0:
             continue
-        strip_arr[zero_index], strip_arr[temp_index] = strip_arr[temp_index], strip_arr[zero_index]
-        zero_index += 1
-    for temp_index in range(arr_len - 1):
-        if strip_arr[temp_index] == strip_arr[temp_index + 1]:
-            strip_arr[temp_index] *= 2
-            for move_index in range(temp_index + 1, arr_len - 1):
-                strip_arr[move_index] = strip_arr[move_index + 1]
-            strip_arr[arr_len - 1] = 0
+        know_list[temp_num - 1] = True
+    print(know_list)
 
+    party_arr = []
+    people_map = [[False] * people_num for _ in range(people_num)]
+    for _ in range(party_num):
+        party_arr.append(list(map(int, sys.stdin.readline().rstrip().split(sep=' '))))
+        for first_index in range(1, len(party_arr[-1]) - 1):
+            for second_index in range(first_index + 1, len(party_arr[-1])):
+                people_map[party_arr[-1][first_index] - 1][party_arr[-1][second_index] - 1] = True
+                people_map[party_arr[-1][second_index] - 1][party_arr[-1][first_index] - 1] = True
+                print(first_index, second_index)
+    for temp_list in people_map:
+        print(temp_list)
+    print(party_arr)
 
-def bfs_board(board_map: deque, arr_len: int) -> deque:
-    output_queue = deque()
-    while board_map:
-        temp_board = board_map.pop()
-        # up press
-        moved_board = temp_board.copy()
-        for temp_width in range(arr_len):
-            temp_strip = []
-            for temp_height in range(arr_len):
-                temp_strip.append(moved_board[temp_height][temp_width])
-            move_arr(temp_strip, arr_len)
-            for temp_height in range(arr_len):
-                moved_board[temp_height][temp_width] = temp_strip[temp_height]
-        output_queue.append(moved_board)
-        # down press
-        moved_board = temp_board.copy()
-        for temp_width in range(arr_len):
-            temp_strip = []
-            for temp_height in range(arr_len):
-                temp_strip.append(moved_board[arr_len - temp_height - 1][temp_width])
-            move_arr(temp_strip, arr_len)
-            for temp_height in range(arr_len):
-                moved_board[arr_len - temp_height - 1][temp_width] = temp_strip[temp_height]
-        output_queue.append(moved_board)
-        # left press
-        moved_board = temp_board.copy()
-        for temp_height in range(arr_len):
-            move_arr(moved_board[temp_height], arr_len)
-        output_queue.append(moved_board)
-        # right press
-        moved_board = temp_board.copy()
-        for temp_height in range(arr_len):
-            temp_strip = moved_board[temp_height][::-1]
-            move_arr(temp_strip, arr_len)
-            for temp_width in range(arr_len):
-                moved_board[temp_height][temp_width] = temp_strip[arr_len - temp_width - 1]
-        output_queue.append(moved_board)
-    return output_queue
+    output_list = dfs(people_map, know_list)
+    print(output_list)
 
-
-def search_max_block(start_board: list, depth_num: int):
-    temp_queue = deque([start_board])
-    for _ in range(depth_num):
-        temp_queue = bfs_board(temp_queue)
-
-
-
-def main() -> None:
-    # Get input
-    board_size = int(sys.stdin.readline().rstrip())
-    board_map = []
-    for _ in range(board_size):
-        board_map.append(list(map(int, sys.stdin.readline().rstrip().split(sep=' '))))
+    return
 
 
 if __name__ == "__main__":
-    # main()
-    a = [2, 2, 4, 4]
-    b = [[2, 2, 2], [4, 4, 4], [8, 8, 8]]
-    move_arr(a, 3)
-    print(a)
-    bfs_board(deque([b]), 3)
+    main()
