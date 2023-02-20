@@ -1,22 +1,21 @@
 import sys
 
 
-def main():
-    first_str = sys.stdin.readline().rstrip()
-    second_str = sys.stdin.readline().rstrip()
-    check_list = [0] * len(first_str)
-    for temp_char in second_str:
-        temp_list = [0] * len(first_str)
-        for temp_index, temp_temp_char in enumerate(first_str):
-            if temp_char != temp_temp_char:
-                continue
-            if temp_index > 0:
-                temp_list[temp_index] = max(check_list[:temp_index])
-            else:
-                temp_list[temp_index] = 0
-            temp_list[temp_index] += 1
-        print(check_list)
-    print(max(check_list))
+def get_num():
+
+    return
+
+
+def get_max_num():
+    return
+
+
+def main() -> None:
+    first_height, first_width, second_height, second_width = map(int, sys.stdin.readline().rstrip().split(sep=' '))
+    for temp_height in range(first_height, second_height + 1):
+        for temp_width in range(first_width, second_width + 1):
+
+            return
     return
 
 
