@@ -1,57 +1,55 @@
-from collections import deque
 import sys
 
 
-def dfs_node(input_map: list, check_list: list, temp_deque: deque) -> bool:
-    if len(temp_deque) >= 5:
-        return True
+# List to save fibo lists
+g_fibo_list = [0, 1]
 
-    temp_node = temp_deque[-1]
 
-    for temp_index, temp_map in enumerate(input_map[temp_node]):
-        if not temp_map or check_list[temp_index]:
-            continue
+def get_fibo_num(input_num) -> int:
+    """
+        Get fibonacci number from global list if possible, else calculate till the index wanted
+        Arguments:
+            input_num: the index of fibonacci list wanted
+        Returns:
+            The fibonacci number for the index inputted
+    """
 
-        temp_deque.append(temp_index)
-        check_list[temp_index] = True
-        if dfs_node(input_map, check_list, temp_deque):
-            return True
-        temp_deque.pop()
-        check_list[temp_index] = False
-    return False
+    # While the fibonacci list doesn't have the index
+    while input_num >= len(g_fibo_list):
+        # Add another list to the end of the global list using the last two lists
+        g_fibo_list.append(g_fibo_list[-1] + g_fibo_list[-2])
+
+        # Log change
+        print(f"{g_fibo_list[-1]} added to list")
+
+    # Return the fibonacci list from the global list
+    return g_fibo_list[input_num]
 
 
 def main() -> None:
-    # Get data input + make node map
-    input_num, input_len = map(int, sys.stdin.readline().rstrip().split(sep=' '))
-    input_list = [[False] * input_num for _ in range(input_num)]
-    for _ in range(input_len):
-        from_node, to_node = map(int, sys.stdin.readline().rstrip().split(sep=' '))
-        input_list[from_node][to_node] = input_list[to_node][from_node] = True
-    '''
-    print(f"input_num: {input_num}")
-    print(f"input_len: {input_len}")
-    print("input_list:")
-    for temp in input_list:
-        print(temp)
-    print()
-    '''
+    # Number of test cases
+    case_num = int(sys.stdin.readline().rstrip())
 
-    # Call dfs for each node as a starting point
-    # If a path with length that is greater than 5 is found print 1
+    # Loop for each test case
+    for _ in range(case_num):
+        # Get input number
+        input_num = int(sys.stdin.readline().rstrip())
 
-    # Set up variables
-    check_list = [False] * input_num
-    temp_deque = deque()
-    for start_node in range(input_num):
-        temp_deque.append(start_node)
-        check_list[start_node] = True
-        if dfs_node(input_list, check_list, temp_deque):
-            print(1)
-            return
-        temp_deque.pop()
-        check_list[start_node] = False
-    print(0)
+        # Check input_num
+        print(f"input_num: {input_num}")
+
+        # Check list for input num as index
+        output_list = [get_fibo_num(input_num - 1), get_fibo_num(input_num)]
+
+        # Check exception
+        if input_num == 0:
+            output_list = [1, 0]
+
+        # Check output_list
+        print(f"output_num: {output_list}")
+
+        # Print output list
+        print(' '.join(map(str, output_list)))
 
     return
 
